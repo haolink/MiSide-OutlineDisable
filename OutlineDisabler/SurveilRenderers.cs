@@ -86,8 +86,8 @@ public class SurveilRenderers : MonoBehaviour
             }
         }
 
-        /*if (MainSettings.DisablePostProcessingOutlines)
-        {*/
+        if (MainSettings.DisablePostProcessingOutlines)
+        {
             PostProcessVolume[] volumeProcessors = GameObject.FindObjectsOfType<PostProcessVolume>(true);
             foreach (PostProcessVolume volumeProcessor in volumeProcessors)
             {
@@ -97,7 +97,7 @@ public class SurveilRenderers : MonoBehaviour
                     volumeProcessor.sharedProfile.RemoveSettings<SobelOutline>();
                 }
             }
-        //}
+        }
     }    
   
     void OnApplicationQuit()
